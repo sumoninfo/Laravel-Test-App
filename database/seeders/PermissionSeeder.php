@@ -18,20 +18,20 @@ class PermissionSeeder extends Seeder
     {
         $permissions = [
             //role
-            ['name' => 'role-list', 'group_name' => 'role'],
-            ['name' => 'role-create', 'group_name' => 'role'],
-            ['name' => 'role-edit', 'group_name' => 'role'],
-            ['name' => 'role-delete', 'group_name' => 'role'],
+            ['name' => 'role-list'],
+            ['name' => 'role-create'],
+            ['name' => 'role-edit'],
+            ['name' => 'role-delete'],
             //user
-            ['name' => 'user-list', 'group_name' => 'user'],
-            ['name' => 'user-create', 'group_name' => 'user'],
-            ['name' => 'user-edit', 'group_name' => 'user'],
-            ['name' => 'user-delete', 'group_name' => 'user'],
+            ['name' => 'user-list'],
+            ['name' => 'user-create'],
+            ['name' => 'user-edit'],
+            ['name' => 'user-delete'],
             //product
-            ['name' => 'product-list', 'group_name' => 'product'],
-            ['name' => 'product-create', 'group_name' => 'product'],
-            ['name' => 'product-edit', 'group_name' => 'product'],
-            ['name' => 'product-delete', 'group_name' => 'appointment']
+            ['name' => 'product-list'],
+            ['name' => 'product-create'],
+            ['name' => 'product-edit'],
+            ['name' => 'product-delete']
         ];
 
         $permission_admin_ids     = [];
@@ -42,7 +42,6 @@ class PermissionSeeder extends Seeder
         foreach ($permissions as $permission) {
             $obj             = new Permission();
             $obj->name       = $permission['name'];
-            $obj->group_name = $permission['group_name'];
             $obj->created_at = $time_stamp;
             $obj->save();
             //admin permissions ids
