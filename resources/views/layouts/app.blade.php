@@ -54,9 +54,15 @@
                             </li>
                         @endif
                     @else
-                        <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                        <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                        <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+                        @can('user-list')
+                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                        @endcan
+                        @can('role-list')
+                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                        @endcan
+                        @can('product-list')
+                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+                        @endcan
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
