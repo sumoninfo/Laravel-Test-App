@@ -49,7 +49,7 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
                                     <div>
-                                        Run this command when the database connection is complete
+                                        Run this command when the database connection is complete<br>
                                         <code>php artisan migrate:fresh --seed</code>
                                     </div>
                                 </div>
